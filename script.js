@@ -168,7 +168,7 @@
 			var searchLink = '<a href="' + searchForm + '" target="_blank" class="search"><i class="fa fa-external-link"></i></a>';
 
 			var template =	'<tr>' +
-								'<td>' + car.model_name + searchLink + '</td>'
+								'<td><h5>' + car.model_name + searchLink + '<h5></td>'
 								// '<td class="text-center">' + searchLink + '</td>' +
 							'</tr>';
 
