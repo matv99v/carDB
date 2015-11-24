@@ -12,8 +12,21 @@
 		$modelsHolder = $('#modelsHolder'),
 		$closeWindow = $('#closeWindow'),
 		$closeCross = $('#closeCross'),
-		$paranja = $('#paranja');
+		$paranja = $('#paranja'),
+		$loader = $('#loader');
 
+	$.ajaxSetup({
+		beforeSend: function(){
+			$loader[0].style.display = "block";
+			console.log('start', $loader);
+		},
+
+		complete: function(){
+			$loader[0].style.display = "none";
+
+			console.log('finish', $loader);
+		}
+	});
 
 
 	getData("getYears").then(function (data){
